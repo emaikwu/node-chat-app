@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Chat | ChatApp</title>
+</head>
+<body class="chat">
+
+  <div class="chat__sidebar">
+    <h3>People</h3>
+    <div id="users">
+      
+    </div>
+  </div>
+
+  <div class="chat__main">
+      <ol id="messages" class="chat__messages">
+    
+      </ol>
+    <div class="chat__footer">
+      <form action="" id="message-form">
+        <input type="text" autocomplete="off" name="message" placeholder="Message" id="input">
+        <button>SEND</button>
+      </form>
+      <button type="submit" id="send-location">Send Location</button>
+    </div>
+  </div>
+
+  <script  id="message-template" type="text/template">
+    <li class="message">
+      <div class="message__title">
+        <h4>{{from}}</h4>
+        <span></span>
+      </div>
+      <div class="message__body">
+        {{text}}
+      </div>
+    </li>
+
+  </script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/libs/jquery.js"></script>
+  <script src="/js/libs/mustache.js"></script>
+  <script src="/js/libs/deparam.js"></script>
+  <script src="/js/libs/moment.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>
